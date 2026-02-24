@@ -12,11 +12,6 @@
     <!-- Packaging & Nexus Configuration -->
     <IsPackable>true</IsPackable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>EmployeeMgmtSystem</PackageId>
-
-    <!-- Nexus Details -->
-    <NexusUrl>http://192.168.0.32:8081/repository/dotnet-project-meet/</NexusUrl>
-    <NexusKey>4d419e7d-f8ea-3a9f-a9b6-384483780396</NexusKey>
 
     <!-- Fix for deps file issue -->
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
