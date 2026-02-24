@@ -17,7 +17,7 @@
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
 
   </PropertyGroup>
-
+<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   <!-- Automatic Push to Nexus -->
   <Target Name="PushToNexus" AfterTargets="Publish">
 
