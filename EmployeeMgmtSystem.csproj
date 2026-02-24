@@ -16,18 +16,18 @@
     <!-- Fix for deps file issue -->
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
 
+    <!-- FIX: stop auto AssemblyInfo generation -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+
   <!-- Automatic Push to Nexus -->
   <Target Name="PushToNexus" AfterTargets="Publish">
 
     <Message Importance="high"
              Text="Publish complete. Starting Nexus Push for version $(Version)..." />
 
-    <!-- Pack with dynamic version -->
     <Exec Command="dotnet pack -c $(Configuration) /p:PackageVersion=$(Version)" />
 
-    <!-- Push to Nexus -->
     <Exec Command="dotnet nuget push bin/$(Configuration)/$(PackageId).$(Version).nupkg --source $(NexusUrl) --api-key $(NexusKey)" />
 
   </Target>
